@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Audio Spatial Demo</title>
+</head>
+<body>
+    <div id="mouse_pos"></div>
+    <div id="target_pos"></div>
+    <div id="mouse_audio_pos"></div>
+    <div id="target_audio_pos"></div>
+    <div id="scale"></div>
+    <div id="mouse_marker" class="marker" style="background: red;"></div>
+    <div id="target_marker" class="marker" style="background: green;"></div>
+    <script src="app.js"></script>
+    <style>
+        .marker {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            display: none;
+        }
+    </style>
+</body>

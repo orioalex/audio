@@ -103,7 +103,6 @@ function update_UI() {
     distance_txt.innerText = `Distance: ${distance.toFixed(2)}`;
     scale_txt.innerText = `🔍 Audio Scale: ${scale.toFixed(2)}x`;
 
-    // 只顯示滑鼠與目標的邏輯座標
     mouse_pos.innerText = `Mouse XY: [${real_mouse_posX.toFixed(0)}, ${real_mouse_posY.toFixed(0)}]`;
     target_pos.innerText = `Target XY: [${real_target_posX.toFixed(0)}, ${real_target_posY.toFixed(0)}]`;
 }
@@ -125,8 +124,8 @@ reset_btn.addEventListener("click", () => {
     mouse_audio.panner.positionY.value = 0;
     
     reset_btn.style.display = "none";
-    update_UI();
     game_over = false;
+    update_UI();
 });
 
 window.addEventListener("mousemove", (e) => {
